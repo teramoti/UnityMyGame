@@ -23,7 +23,7 @@ public class ShellItem : MonoBehaviour
 
             //  ShotShellスクリプトの中に記載されている「AddShellメソッド」を呼び出す。
             // rewardで設定した数値分だけ弾数が回復する。
-            ss.AddShell(reward);
+           // ss.AddShell(reward);
 
             // アイテムを画面から削除する。
             Destroy(gameObject);

@@ -65,3 +65,6 @@ C:\Users\s172137\Desktop\UnityMyGame\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\s172137\Desktop\UnityMyGame\Temp\bin\Debug\UnityEditor.SpatialTracking.xml
 C:\Users\s172137\Desktop\UnityMyGame\Temp\bin\Debug\UnityEditor.VR.xml
 C:\Users\s172137\Desktop\UnityMyGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+C:\Users\s172137\Documents\UintyMyGame\UnityMyGame\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\s172137\Documents\UintyMyGame\UnityMyGame\obj\Debug\Assembly-CSharp.dll
+C:\Users\s172137\Documents\UintyMyGame\UnityMyGame\obj\Debug\Assembly-CSharp.pdb
