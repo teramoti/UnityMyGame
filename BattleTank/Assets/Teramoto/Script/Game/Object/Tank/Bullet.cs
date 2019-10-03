@@ -23,8 +23,9 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.Space) && timer > timeBetweenShot)
+        /*射撃ボタン1が押されたとき*/
+        bool fire = Input.GetButtonDown("Fire2");
+        if (fire==true && timer > timeBetweenShot)
         {
             timer = 0.0f;
             GameObject shell = Instantiate(shellPrefab, transform.position, Quaternion.identity);

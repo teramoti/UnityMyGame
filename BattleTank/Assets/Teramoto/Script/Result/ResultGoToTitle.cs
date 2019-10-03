@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ResultGoToTitle : MonoBehaviour
 {
+
+    bool IsPush;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +15,8 @@ public class ResultGoToTitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     if(Input.GetKeyDown(KeyCode.Space))
+        IsPush = Input.GetButtonDown("Fire2");
+     if (IsPush==true)
         {
             SceneManager.LoadScene("Title");
         }   

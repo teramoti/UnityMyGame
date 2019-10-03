@@ -15,7 +15,7 @@ public class EnemyCunnonManager : MonoBehaviour
         boxCol = GetComponent<BoxCollider>();
         rader = GetComponent<EnemyRadar>();
         
-        gameClearManager = GameObject.Find("GameManegement");
+        gameClearManager = GameObject.Find("GameManager");
         script = gameClearManager.GetComponent<GameClearController>();
 
     }

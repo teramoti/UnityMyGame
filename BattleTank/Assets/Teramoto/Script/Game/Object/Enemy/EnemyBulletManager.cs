@@ -12,7 +12,7 @@ public class EnemyBulletManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameClearManager = GameObject.Find("GameManegement");
+        gameClearManager = GameObject.Find("GameManager");
         script = gameClearManager.GetComponent<GameClearController>();
         rader = GetComponent<EnemyRadar>();
         shot = GetComponent<EnemyCunnonBaseShot>();

@@ -13,6 +13,10 @@ public class TankManager : MonoBehaviour
     GameObject gameClearManager;
     GameClearController script;
 
+    GameObject trap;
+    friezeTrap trapScript;
+
+
     GameObject cunnonBase;
     Bullet shot;
 
@@ -26,7 +30,7 @@ public class TankManager : MonoBehaviour
        health = GetComponent<TankHealth>();
 
 
-        gameClearManager = GameObject.Find("GameManegement");
+        gameClearManager = GameObject.Find("GameManager");
         script = gameClearManager.GetComponent<GameClearController>();
 
         cunnonBase = GameObject.Find("TurretPos");
@@ -42,11 +46,9 @@ public class TankManager : MonoBehaviour
             boxCol.enabled = false;
             move.enabled = false;
             rb.isKinematic = true;
-          //  shot.enabled = false;
         }
         else
         {
-            //shot.enabled = true;
             boxCol.enabled = true;
             move.enabled = true;
             rb.isKinematic = false;
@@ -65,11 +67,14 @@ public class TankManager : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyShell")
         {
-            if(!script.GetAnimeFlag())
+            if (!script.GetAnimeFlag())
             {
                 health.Damage();
             }
             Destroy(other.gameObject);
         }
+
+
     }
+
 }

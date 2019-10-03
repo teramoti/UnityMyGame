@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 135947364265610912}
   - component: {fileID: 23729692659173300}
   - component: {fileID: 54858573284364292}
+  - component: {fileID: 108265472813908781}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Shell
@@ -80,6 +81,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -108,3 +110,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &108265472813908781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728310970739156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e7b1ccbc88a3346a22cea71347990f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

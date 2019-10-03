@@ -57,15 +57,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerBulletManager.cs" />
-    <Compile Include="Assets\Teramoto\Script\Blinker.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Camera\CameraController.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Camera\ChaseCamera.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Camera\CMC.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Camera\MainCameraController.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Camera\ZoomController.cs" />
+    <Compile Include="Assets\GameMainSystem.cs" />
+    <Compile Include="Assets\JoinController.cs" />
+    <Compile Include="Assets\Recover.cs" />
+    <Compile Include="Assets\Score.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\GameClearController.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\BulletCollisionToBrock.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Camera\CameraController.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Camera\ChaseCamera.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Camera\CMC.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Camera\MainCameraController.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Camera\ZoomController.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\DestroyObject.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Enemy\AppearEffect.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Enemy\EnemyBulletManager.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Enemy\EnemyChase.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Enemy\EnemyCunnonBaseShot.cs" />
@@ -83,40 +87,50 @@
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\GameEnd.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\GameStart.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\MoveFromResultToTitle.cs" />
-    <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\ResultBullet.cs" />
+    <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\PlayerBulletManager.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\TankHealth.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\TankManager.cs" />
     <Compile Include="Assets\Teramoto\Script\Game\Object\Tank\TankMovement.cs" />
+    <Compile Include="Assets\Teramoto\Script\PauseScript.cs" />
+    <Compile Include="Assets\Teramoto\Script\Result\clearCamera.cs" />
+    <Compile Include="Assets\Teramoto\Script\Result\ResultBlinker.cs" />
     <Compile Include="Assets\Teramoto\Script\Result\ResultGoToTitle.cs" />
+    <Compile Include="Assets\Teramoto\Script\Result\ResultScore.cs" />
     <Compile Include="Assets\Teramoto\Script\Title\BackGorund.cs" />
+    <Compile Include="Assets\Teramoto\Script\Title\TitleBlinker.cs" />
     <Compile Include="Assets\Teramoto\Script\Title\TitleGoToMainGame.cs" />
+    <Compile Include="Assets\Teramoto\Script\tutorialText.cs" />
     <Compile Include="Assets\Teramoto\Script\WindowSize.cs" />
+    <Compile Include="Assets\UIImage.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/s172137/Desktop/BattleTank/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/s172137/Documents/UintyMyGame/BattleTank/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

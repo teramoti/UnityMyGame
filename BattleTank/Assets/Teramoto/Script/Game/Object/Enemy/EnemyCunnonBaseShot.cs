@@ -1,23 +1,21 @@
-﻿
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCunnonBaseShot : MonoBehaviour
 {
-    //弾のPrefab
     public GameObject enemyShellPrefab;
-    //発射速度
     public float shotSpeed;
-    //撃つときの音
     public AudioClip shotSound;
-    //リロード時間
     private int shotIntarval;
 
+    [SerializeField]
+    private int shotTime=60;
 
     private AudioSource audioSource;
 
+    [SerializeField]
+    private float destroyTime=3.0f;
 
     void Start()
     {
@@ -25,6 +23,12 @@ public class EnemyCunnonBaseShot : MonoBehaviour
     }
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
+
+
         shotIntarval += 1;
 
         if (shotIntarval % 60 == 0)
@@ -36,9 +40,9 @@ public class EnemyCunnonBaseShot : MonoBehaviour
             // forwardはZ軸方向（青軸方向）・・・＞この方向に力を加える。
             enemyShellRb.AddForce(transform.forward * shotSpeed);
 
-            audioSource.PlayOneShot(shotSound);
+            AudioSource.PlayClipAtPoint(shotSound, transform.position);
 
-            Destroy(enemyShell, 3.0f);
+            Destroy(enemyShell, destroyTime);
         }
     }
 }

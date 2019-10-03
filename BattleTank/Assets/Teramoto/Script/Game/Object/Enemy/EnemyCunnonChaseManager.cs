@@ -23,7 +23,7 @@ public class EnemyCunnonChaseManager : MonoBehaviour
         boxCol = GetComponent<BoxCollider>();
 
 
-        gameClearManager = GameObject.Find("GameManegement");
+        gameClearManager = GameObject.Find("GameManager");
         script = gameClearManager.GetComponent<GameClearController>();
 
     }

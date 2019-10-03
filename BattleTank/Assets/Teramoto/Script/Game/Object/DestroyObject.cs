@@ -9,6 +9,12 @@ public class DestroyObject : MonoBehaviour
     public GameObject breakObjecteffectPrefab;
     public int objectHP;
 
+
+    GameObject score;
+
+    [SerializeField]
+    private int enemySocre=0; 
+    Score script;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Shell"))
@@ -26,14 +32,16 @@ public class DestroyObject : MonoBehaviour
                 Destroy(effect, 2.0f);
             }
             else
-            { 
+            {
+                score = GameObject.Find("Canvas");
+                script = score.GetComponent<Score>();
                 // ★★追加  そうでない場合（HPが0以下になった場合）には（条件）
                 Destroy(other.gameObject);
 
                 // もう１種類のエフェクを発生させる。
                 GameObject effect2 = Instantiate(breakObjecteffectPrefab, transform.position, Quaternion.identity);
                 Destroy(effect2, 2.0f);
-
+                script.AddScore(enemySocre);
                 Destroy(this.gameObject);
             }
         }

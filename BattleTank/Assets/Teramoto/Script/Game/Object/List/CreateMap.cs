@@ -10,9 +10,10 @@ public class CreateMap : MonoBehaviour
     [SerializeField]//マップデータのプレハブ変数
     private GameObject[] mapDatePrefab = null;
 
-    // [HideInInspector]//スケール用変数
+    // [HideInInspector]//拡大率
     public float scaling = 1.0f;
 
+    //幅
     public float scal = 0.0f;
 
 
@@ -25,6 +26,11 @@ public class CreateMap : MonoBehaviour
         Prefab_3,
         Prefab_4,
         Prefab_5,
+        Prefab_6,
+        Prefab_7,
+        Prefab_8,
+        Prefab_9,
+        Prefab_10,
     };
 
     const int prefab_0 = (int)BlockNumber.Prefab_0;
@@ -33,6 +39,11 @@ public class CreateMap : MonoBehaviour
     const int prefab_3 = (int)BlockNumber.Prefab_3;
     const int prefab_4 = (int)BlockNumber.Prefab_4;
     const int prefab_5 = (int)BlockNumber.Prefab_5;
+    const int prefab_6 = (int)BlockNumber.Prefab_6;
+    const int prefab_7 = (int)BlockNumber.Prefab_7;
+    const int prefab_8 = (int)BlockNumber.Prefab_8;
+    const int prefab_9 = (int)BlockNumber.Prefab_9;
+    const int prefab_10 = (int)BlockNumber.Prefab_10;
 
     GameObject tank;
 
@@ -138,6 +149,51 @@ public class CreateMap : MonoBehaviour
                             }
                             break;
 
+                        //prefab_1だったら
+                        case prefab_6:
+                            if (mapDatePrefab[prefab_6] != null)
+                            {
+                                obj = Instantiate(mapDatePrefab[integer], transform);
+                                break;
+                            }
+                            break;
+                        //prefab_2だったら
+                        case prefab_7:
+                            if (mapDatePrefab[prefab_7] != null)
+                            {
+                                obj = Instantiate(mapDatePrefab[integer], transform);
+                                break;
+                            }
+                            break;
+
+                        //prefab_3だったら
+                        case prefab_8:
+                            if (mapDatePrefab[prefab_8] != null)
+                            {
+                                obj = Instantiate(mapDatePrefab[integer], transform);
+                                break;
+                            }
+                            break;
+
+                        //prefab_4だったら
+                        case prefab_9:
+                            if (mapDatePrefab[prefab_9] != null)
+                            {
+                                obj = Instantiate(mapDatePrefab[integer], transform);
+                                break;
+                            }
+                            break;
+
+                        //prefab_5だったら
+                        case prefab_10:
+                            if (mapDatePrefab[prefab_10] != null)
+                            {
+                                obj = Instantiate(mapDatePrefab[integer], transform);
+                                break;
+                            }
+
+                            break;
+
                         //空白
                         default:
                             break;
@@ -146,7 +202,7 @@ public class CreateMap : MonoBehaviour
                     if (obj != null)
                     {
 
-                        obj.transform.position = new Vector3(transform.position.x + sub.x,0, transform.position.z + sub.z);
+                        obj.transform.position = new Vector3(transform.position.x+sub.x, transform.position.y ,transform.position.z + sub.z);
                         obj.transform.localScale *= scaling;
                     }
                 }
@@ -157,7 +213,7 @@ public class CreateMap : MonoBehaviour
             sub.z -= scaling * scal;
 
             //プレイヤーの位置変更
-            tank.transform.position = new Vector3(-125,2,-70);
+            tank.transform.position = new Vector3(-125,2,-125);
 
             IsEnemyAriveFlag = false;
         }

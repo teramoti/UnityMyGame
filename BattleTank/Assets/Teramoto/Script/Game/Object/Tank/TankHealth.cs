@@ -36,16 +36,13 @@ public class TankHealth : MonoBehaviour
     {
         if (tankHP > 0)
         {
-            //ダメージエフェクト
-            // GameObject effect1 = Instantiate(effectPrefab1, transform.position, Quaternion.identity);
-            //  Destroy(effect1, 1.0f);
-        }
+     }
         else
         {
 
             //爆破エフェクト
-            // GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
-            // Destroy(effect2, 1.0f);
+            GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
+            Destroy(effect2);
             this.gameObject.SetActive(false);
             //イベントを呼ぶ
             Invoke("GoToGameOver", 1.5f);
@@ -57,6 +54,10 @@ public class TankHealth : MonoBehaviour
         HPLabel.text = "×" + tankHP;
         //音(sound1)を鳴らす
         audioSource.PlayOneShot(damegeSound);
+        //ダメージエフェクト
+        GameObject effect1 = Instantiate(effectPrefab1, transform.position, Quaternion.identity);
+        Destroy(effect1);
+
 
     }
 
