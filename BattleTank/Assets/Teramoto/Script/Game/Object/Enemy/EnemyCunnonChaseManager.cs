@@ -8,9 +8,8 @@ public class EnemyCunnonChaseManager : MonoBehaviour
     GameClearController script;
     BoxCollider boxCol;
 
-    EnemyRadar rader;
-    GameObject raderPos;
-
+   public EnemyRadar rader;
+    
     GameObject cunnonBase;
     
     public EnemyCunnonBaseShot shot;
@@ -33,15 +32,15 @@ public class EnemyCunnonChaseManager : MonoBehaviour
     {
         if (script.GetAnimeFlag() == true)
         {
-
+            rader.enabled = false;
             boxCol.enabled = false;
             chase.enabled = false;
             shot.enabled = false;
         }
         else
         {
+            rader.enabled = true;
             shot.enabled = true;
-
             boxCol.enabled = true;
             chase.enabled = true;
         }

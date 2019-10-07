@@ -10,6 +10,7 @@ TagManager:
   - Trap
   - Brock
   - score
+  - Item
   layers:
   - Default
   - TransparentFX

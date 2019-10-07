@@ -27,13 +27,13 @@ public class Bullet : MonoBehaviour
         bool fire = Input.GetButtonDown("Fire2");
         if (fire==true && timer > timeBetweenShot)
         {
+            AudioSource.PlayClipAtPoint(shotSound, transform.position);
             timer = 0.0f;
             GameObject shell = Instantiate(shellPrefab, transform.position, Quaternion.identity);
             Rigidbody shellRb = shell.GetComponent<Rigidbody>();
             shellRb.AddForce(transform.forward * shotSpeed);
             shell.transform.rotation = this.transform.rotation;
             Destroy(shell, deleteBullet);
-            AudioSource.PlayClipAtPoint(shotSound, transform.position);
         }
     }
 }

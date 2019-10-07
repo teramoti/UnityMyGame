@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5ad149655953646aca098464a4de9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rader: {fileID: 1324305795150779783}
   shot: {fileID: 6454259136716827197}
 --- !u!1 &6454259138019765998
 GameObject:

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1502669377}
   - component: {fileID: 1502669376}
   - component: {fileID: 1502669375}
-  - component: {fileID: 1502669374}
+  - component: {fileID: 1960704983589948076}
   m_Layer: 0
   m_Name: ItemBox
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502669373}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.969803, y: 7.8, z: 17.994856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,6 +68,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -110,9 +111,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6256, y: 1.6256003, z: 1.6256003}
-  m_Center: {x: 0, y: 0, z: 0.81280017}
---- !u!114 &1502669374
+  m_Size: {x: 1.8989623, y: 1.6256003, z: 1.6256003}
+  m_Center: {x: -0.06260443, y: -4.149567e-15, z: 0.81280017}
+--- !u!114 &1960704983589948076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,10 +122,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1502669373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2006ae7f93a014f4fa426169ffb2ad24, type: 3}
+  m_Script: {fileID: 11500000, guid: 17031ac9cb4d0274ebfb4de6bdc088c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getSound: {fileID: 0}
   effectPrefab: {fileID: 0}
-  ss: {fileID: 0}
-  reward: 5
+  getSound: {fileID: 0}
+  reward: 3

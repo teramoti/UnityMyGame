@@ -66,7 +66,7 @@ MonoBehaviour:
     type: 3}
   breakObjecteffectPrefab: {fileID: 4458688408895104019, guid: f4c7690a49a10fb49a0bb5e38599ecbc,
     type: 3}
-  objectHP: 2
+  objectHP: 3
   enemySocre: 100
 --- !u!114 &7300486954295143443
 MonoBehaviour:
@@ -94,7 +94,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5855281579510975387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.141, z: 0.818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3346340077451676988}
@@ -161,13 +161,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a68d5e4ad5a1b45a99d5071a38f603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyShellPrefab: {fileID: 1358292286180322, guid: 70b27edc7a785f445ac7f65e06808a40,
+  enemyShellPrefab: {fileID: 1358292286180322, guid: d405bdb57d32cd04fb0f5e531993df34,
     type: 3}
   shotSpeed: 800
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
-  shotIntarval: 0
   shotTime: 30
-  destroyTime: 10
+  destroyTime: 8
 --- !u!114 &72520273753005087
 MonoBehaviour:
   m_ObjectHideFlags: 0

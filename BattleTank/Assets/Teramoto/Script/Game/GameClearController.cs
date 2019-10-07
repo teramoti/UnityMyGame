@@ -15,6 +15,7 @@ public class GameClearController : MonoBehaviour
     private GameObject[] enemyBullets;
     private GameObject[] playerBullets;
     private GameObject[] brockObjects;
+    private GameObject[] hpBox;
 
     private int stagenum;
 
@@ -208,7 +209,7 @@ public class GameClearController : MonoBehaviour
     {
         playerBullets = GameObject.FindGameObjectsWithTag("Shell");
         enemyBullets = GameObject.FindGameObjectsWithTag("EnemyShell");
-
+        hpBox= GameObject.FindGameObjectsWithTag("Item");
         foreach (GameObject obj in enemyBullets)
         {
             Destroy(obj);
@@ -217,6 +218,13 @@ public class GameClearController : MonoBehaviour
         {
             Destroy(obj);
         }
+        foreach (GameObject obj in hpBox)
+        {
+            Destroy(obj);
+        }
+
+
+        
     }
 
 }

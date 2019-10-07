@@ -87,7 +87,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
   shotSpeed: 900
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
   shotTime: 60
-  destroyTime: 3
+  destroyTime: 6
 --- !u!114 &1258103383022199688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   shotSpeed: 900
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
   shotTime: 60
-  destroyTime: 3
+  destroyTime: 6
 --- !u!114 &1258103383046478963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ MonoBehaviour:
   shotSpeed: 900
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
   shotTime: 60
-  destroyTime: 3
+  destroyTime: 6
 --- !u!114 &600586942345692733
 MonoBehaviour:
   m_ObjectHideFlags: 0
