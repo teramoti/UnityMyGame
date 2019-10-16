@@ -35,7 +35,6 @@ public class DestroyObject : MonoBehaviour
             {
                 score = GameObject.Find("Canvas");
                 script = score.GetComponent<Score>();
-                // ★★追加  そうでない場合（HPが0以下になった場合）には（条件）
                 Destroy(other.gameObject);
 
                 // もう１種類のエフェクを発生させる。

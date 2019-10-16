@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7300486954295143443}
   - component: {fileID: 4116284567998583965}
   - component: {fileID: 872135080271877528}
+  - component: {fileID: 7100536942686610205}
   m_Layer: 0
   m_Name: EnemyTank 1
   m_TagString: Enemy
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dcf8c234d74b644aea4f2806b3787e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectPrefab: {fileID: 5388727474894279232, guid: af842b0ac1a82de4f8c21c688b083220,
+  effectPrefab: {fileID: 5388727474894279232, guid: dcc121d6d3eb0d34f96994ca17e88417,
     type: 3}
   breakObjecteffectPrefab: {fileID: 4458688408895104019, guid: f4c7690a49a10fb49a0bb5e38599ecbc,
     type: 3}
@@ -114,6 +115,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9592b1b7835f6bb4c9b6d3241272be58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7100536942686610205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5054103714867262355}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1 &5855281579510975387
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +182,7 @@ MonoBehaviour:
     type: 3}
   shotSpeed: 800
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
-  shotTime: 30
+  shotTime: 10
   destroyTime: 8
 --- !u!114 &72520273753005087
 MonoBehaviour:

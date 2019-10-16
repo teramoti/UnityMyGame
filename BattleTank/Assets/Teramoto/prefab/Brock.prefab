@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7125223877773137714}
   - component: {fileID: 5495295553679196384}
+  - component: {fileID: 8422041579735180550}
   m_Layer: 0
   m_Name: Brock
   m_TagString: Brock
@@ -41,6 +42,19 @@ BoxCollider:
   m_GameObject: {fileID: 1269052797710993005}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5985507, y: 5.856366, z: 1.7879968}
+  m_Center: {x: -0.047057036, y: -0.083940886, z: 0.013112373}
+--- !u!65 &8422041579735180550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269052797710993005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5985507, y: 5.856366, z: 1.7879968}
