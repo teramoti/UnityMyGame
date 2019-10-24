@@ -11,6 +11,9 @@ public class EnemyChase : MonoBehaviour
 
 
     public GameObject target;
+
+    public float shotSpeed=600;
+
     private NavMeshAgent agent;
 
 
