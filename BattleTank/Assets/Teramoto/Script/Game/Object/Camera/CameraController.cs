@@ -12,8 +12,6 @@ public class CameraController : MonoBehaviour
 
     bool deathFlag;
 
-    // ★追加
-    public GameObject aimImage;
     public GameObject loseImage;
     float activetime;
 
@@ -39,7 +37,7 @@ public class CameraController : MonoBehaviour
         gameOverCaremra.enabled = false;
         // ★追加
         // 客観カメラの場合、照準器をオフにする。
-        aimImage.SetActive(false);
+       // aimImage.SetActive(false);
         loseImage.SetActive(false);
         activetime = 0.0f;
         deathFlag = false;
@@ -78,7 +76,7 @@ public class CameraController : MonoBehaviour
             mainCamera.enabled = true;
             subCamera.enabled = false;
             mainCameraON = false;
-            aimImage.SetActive(false);
+           // aimImage.SetActive(false);
 
 
         }
@@ -95,7 +93,7 @@ public class CameraController : MonoBehaviour
 
                     // ★追加
                     // 主観カメラの場合、照準器をオンにする。
-                    aimImage.SetActive(true);
+                    //aimImage.SetActive(true);
                 }
 
                 else if (input==true && mainCameraON == false)
@@ -106,7 +104,7 @@ public class CameraController : MonoBehaviour
 
                     // ★追加
                     // 客観カメラの場合、照準器をオフにする。
-                    aimImage.SetActive(false);
+                //    aimImage.SetActive(false);
                 }
             }
 
