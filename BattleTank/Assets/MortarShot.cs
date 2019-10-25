@@ -26,6 +26,8 @@ public class MortarShot : MonoBehaviour
 
     private int shotIntarval;
 
+    [SerializeField, Tooltip("発射する時間")]
+    private int SHOTTIME=60;
     private void Start()
     {
 
@@ -45,7 +47,7 @@ public class MortarShot : MonoBehaviour
 
         shotIntarval += 1;
 
-        if (shotIntarval % 60 == 0)
+        if (shotIntarval % SHOTTIME == 0)
         {
             //最も近かったオブジェクトを取得
             TargetObject = serchTag(gameObject, "Player");

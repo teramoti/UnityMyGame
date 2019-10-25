@@ -33,13 +33,16 @@ public class DestroyObject : MonoBehaviour
             }
             else
             {
-                score = GameObject.Find("Canvas");
-                script = score.GetComponent<Score>();
+
                 Destroy(other.gameObject);
 
                 // もう１種類のエフェクを発生させる。
                 GameObject effect2 = Instantiate(breakObjecteffectPrefab, transform.position, Quaternion.identity);
                 Destroy(effect2, 2.0f);
+
+
+                score = GameObject.Find("Canvas");
+                script = score.GetComponent<Score>();
                 script.AddScore(enemySocre);
                 Destroy(this.gameObject);
             }

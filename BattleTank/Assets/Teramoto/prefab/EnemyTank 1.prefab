@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7300486954295143443}
   - component: {fileID: 4116284567998583965}
   - component: {fileID: 872135080271877528}
-  - component: {fileID: 7100536942686610205}
   m_Layer: 0
   m_Name: EnemyTank 1
   m_TagString: Enemy
@@ -115,22 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9592b1b7835f6bb4c9b6d3241272be58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &7100536942686610205
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5054103714867262355}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
 --- !u!1 &5855281579510975387
 GameObject:
   m_ObjectHideFlags: 0
