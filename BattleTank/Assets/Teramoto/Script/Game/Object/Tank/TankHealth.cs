@@ -36,9 +36,11 @@ public class TankHealth : MonoBehaviour
     {
         if (tankHP > 0)
         {
-     }
+
+        }
         else
         {
+            tankHP =0;
 
             //爆破エフェクト
             GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
@@ -48,15 +50,16 @@ public class TankHealth : MonoBehaviour
             Invoke("GoToGameOver", 1.5f);
         }
     }
-    public void Damage()
+    public void Damage(Collider other)
     {
-        tankHP -= 1;
-        HPLabel.text = "×" + tankHP;
+        Destroy(other);
         //音(sound1)を鳴らす
         audioSource.PlayOneShot(damegeSound);
         //ダメージエフェクト
         GameObject effect1 = Instantiate(effectPrefab1, transform.position, Quaternion.identity);
         Destroy(effect1);
+        tankHP -= 1;
+        HPLabel.text = "×" + tankHP;
 
 
     }

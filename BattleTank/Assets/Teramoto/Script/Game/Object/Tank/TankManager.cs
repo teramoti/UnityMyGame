@@ -69,7 +69,7 @@ public class TankManager : MonoBehaviour
         {
             if (!script.GetAnimeFlag())
             {
-                health.Damage();
+                health.Damage(other);
             }
             Destroy(other.gameObject);
         }

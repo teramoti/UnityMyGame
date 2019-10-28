@@ -8,32 +8,21 @@ public class Score : MonoBehaviour
 
     private int score;
     public static int FinalScore = 0;
-    public Text SCORELabel;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        score = 0;
-        SCORELabel.text = "×" + score;
+    public Text label;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        SCORELabel.text = "×" + score;
-        print(FinalScore);
+        label.text = ""+score;
         FinalScore = score;
     }
+    // 表示する値
 
-    public int GetScore()
-    {
-        return score;
-    }
 
-    public void AddScore(int addScore)
+
+    public void AddScore(int num)
     {
-        score += addScore;
+        score += num;
     }
 
     public static int GetLastScore()

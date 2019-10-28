@@ -44,6 +44,10 @@ public class MortarShot : MonoBehaviour
 
     private void Update()
     {
+        if (TargetObject == null)
+        {
+            return;
+        }
 
         shotIntarval += 1;
 
@@ -62,6 +66,8 @@ public class MortarShot : MonoBehaviour
     /// </summary>
     private void ThrowingBall()
     {
+       
+
             // Ballオブジェクトの生成
             GameObject ball = Instantiate(ThrowingObject, this.transform.position, Quaternion.identity);
 
