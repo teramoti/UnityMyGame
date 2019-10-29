@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
     {
 
         bool input = Input.GetButtonDown("Fire3");
-        if (script.tankHP < 0)
+        if (script.tankHP <= 0)
         {
             deathFlag = true;
             activetime++;

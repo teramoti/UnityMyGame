@@ -66,7 +66,10 @@ public class MortarShot : MonoBehaviour
     /// </summary>
     private void ThrowingBall()
     {
-       
+       if(TargetObject==null)
+        {
+            return;
+        }
 
             // Ballオブジェクトの生成
             GameObject ball = Instantiate(ThrowingObject, this.transform.position, Quaternion.identity);
@@ -80,13 +83,15 @@ public class MortarShot : MonoBehaviour
             // 射出速度を算出
             Vector3 velocity = CalculateVelocity(this.transform.position, targetPosition, angle);
 
-            // 射出
-            Rigidbody rid = ball.GetComponent<Rigidbody>();
+             ball. transform.localScale += new Vector3(1.0f, 1.0f, 0);
+
+
+        // 射出
+        Rigidbody rid = ball.GetComponent<Rigidbody>();
         rid.AddForce(velocity * rid.mass, ForceMode.Impulse);
 
 
 
-//(transform.forward * shotSpeed);
     }
 
     /// <summary>

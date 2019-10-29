@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyShellPrefab: {fileID: 1358292286180322, guid: 69e878a45951bfd4a969a3805a806ac0,
     type: 3}
-  shotSpeed: 900
+  shotSpeed: 1000
   shotSound: {fileID: 8300000, guid: 0342f23f2a0765244812a53c6a3785cb, type: 3}
   shotTime: 90
   destroyTime: 3

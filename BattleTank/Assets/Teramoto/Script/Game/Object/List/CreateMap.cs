@@ -5,7 +5,7 @@ using System.IO;
 
 public class CreateMap : MonoBehaviour
 {
-    private string musicName= "test"; // 読み込む譜面の名前
+    private string textName= "test"; // 読み込む譜面の名前
 
     [SerializeField]//マップデータのプレハブ変数
     private GameObject[] mapDatePrefab = null;
@@ -53,7 +53,7 @@ public class CreateMap : MonoBehaviour
     {
         IsEnemyAriveFlag = true;
 
-        musicName = "test";
+        textName = "test";
 
         tank = GameObject.Find("Tank");
 
@@ -71,7 +71,7 @@ public class CreateMap : MonoBehaviour
     {
 
         Vector3 sub = Vector3.zero;
-        string a = musicName + stagenum;
+        string a = textName + stagenum;
 
         csvFile = Resources.Load(a) as TextAsset;
         StringReader reader = new StringReader(csvFile.text);

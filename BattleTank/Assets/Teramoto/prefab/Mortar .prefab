@@ -191,7 +191,7 @@ MonoBehaviour:
     type: 3}
   TargetObject: {fileID: 7694061681468086289, guid: 4c2ea03722af9694d923c6e831482667,
     type: 3}
-  ThrowingAngle: 45
+  ThrowingAngle: 50
   shotSpeed: 700
   SHOTTIME: 120
 --- !u!1 &8964649121681342574

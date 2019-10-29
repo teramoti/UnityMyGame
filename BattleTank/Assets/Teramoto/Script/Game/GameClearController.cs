@@ -43,7 +43,6 @@ public class GameClearController : MonoBehaviour
     int cleartimer;
 
     public Image winUI;
-    public Image roundUI;
 
     public Image startUI;
 
@@ -51,11 +50,16 @@ public class GameClearController : MonoBehaviour
 
     public List<int> number = new List<int>();
 
+    public Text round;
+
+    int textnum;
+
     void Start()
     {
         csv = GameObject.Find("csv");
         script = csv.GetComponent<CreateMap>();
         stagenum = 0;
+
         clearFlag = false;
 
         audioSource = GetComponent<AudioSource>();
@@ -67,6 +71,8 @@ public class GameClearController : MonoBehaviour
         cleartimer = 0;
         winUI.enabled = false;
         startUI.enabled = false;
+        textnum = stagenum + 1;
+        round.text = "" + textnum;
 
     }
     void Update()
@@ -76,7 +82,9 @@ public class GameClearController : MonoBehaviour
          // Enemyというタグが付いているオブジェクトのデータを箱の中に入れる。
          enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
 
+        textnum=stagenum + 1;
         enemyNum = enemyObjects.Length;
+        round.text = "" + textnum;
 
         // データの入った箱のデータが０に等しくなった時（Enemyというタグが付いているオブジェクトが全滅したとき）
         if (enemyNum == 0)
@@ -108,12 +116,19 @@ public class GameClearController : MonoBehaviour
             {
                 //マップ読み込み
                 LoadStage();
+                foreach (GameObject obj in enemyObjects)
+                {
+                    obj.gameObject.SetActive(false);
+                    print("消す");
+                }
+
             }
             else
             {
                 cleartimer++;
                 Destroy();
                 winUI.enabled = true;
+
             }
         }
 
@@ -139,7 +154,6 @@ public class GameClearController : MonoBehaviour
         }
         script.Make(stagenum);
 
-        View(stagenum);
         print("現在のステージは"+stagenum);
 
         animeFlag = true;
@@ -174,35 +188,14 @@ public class GameClearController : MonoBehaviour
             animeFlag = false;
             timer = 0;
             startUI.enabled = false;
+            foreach (GameObject obj in enemyObjects)
+            {
+                obj.gameObject.SetActive(true);
+            }
+
 
         }
 
-    }
-
-    //スコアを表示するメソッド
-    void View(int score)
-    {
-        var digit = score;
-        //要素数0には１桁目の値が格納
-        number = new List<int>();
-        while (digit != 0)
-        {
-            score = digit % 10;
-            digit = digit / 10;
-            number.Add(score);
-        }
-
-        GameObject.Find("RoundImage").GetComponent<Image>().sprite = numimage[number[0]];
-        for (int i = 1; i < number.Count; i++)
-        {
-            //複製
-            RectTransform scoreimage = (RectTransform)Instantiate(GameObject.Find("RoundImage")).transform;
-            scoreimage.SetParent(this.transform, false);
-            scoreimage.localPosition = new Vector2(
-                scoreimage.localPosition.x - scoreimage.sizeDelta.x * i,
-                scoreimage.localPosition.y);
-            scoreimage.GetComponent<Image>().sprite = numimage[number[i]];
-        }
     }
 
     void Destroy()
