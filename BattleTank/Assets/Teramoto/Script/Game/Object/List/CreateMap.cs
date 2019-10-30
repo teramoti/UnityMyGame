@@ -215,6 +215,7 @@ public class CreateMap : MonoBehaviour
             //プレイヤーの位置変更
             tank.transform.position = new Vector3(-125,2,-125);
 
+            tank.transform.rotation = new Quaternion(0, 1, 0, 1);
             IsEnemyAriveFlag = false;
         }
     }

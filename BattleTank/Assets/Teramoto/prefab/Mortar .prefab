@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 5388727474894279232, guid: af842b0ac1a82de4f8c21c688b083220,
     type: 3}
-  breakObjecteffectPrefab: {fileID: 6089109418923266045, guid: 7a6c118cd5e4021488e3149c7bc1aea1,
+  breakObjecteffectPrefab: {fileID: 4458688408895104019, guid: f4c7690a49a10fb49a0bb5e38599ecbc,
     type: 3}
   objectHP: 4
   enemySocre: 100
