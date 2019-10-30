@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 679, y: 494}
+  m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 129
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +136,7 @@ MonoBehaviour:
     y: 0
     width: 1115
     height: 947
-  m_MinSize: {x: 406, y: 494}
+  m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
   controlID: 58
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 1115
     height: 499
-  m_MinSize: {x: 406, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 404, y: 222}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
   controlID: 59
 --- !u!114 &8
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 408
     height: 499
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -212,13 +212,13 @@ MonoBehaviour:
     height: 499
   m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 805
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -385,9 +385,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46330000
-      m_LastClickedID: 13126
-      m_ExpandedIDs: 6efbffff46330000
+      m_SelectedIDs: 843e0000
+      m_LastClickedID: 16004
+      m_ExpandedIDs: 02b1ffff843e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -432,24 +432,24 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 272
-    y: 72.66667
-    width: 470
-    height: 291
+    x: 408
+    y: 73
+    width: 705
+    height: 480
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 92114bdfd5a1c9f418777bc9adb51dd0
   m_Gizmos: 0
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 702.56476, y: 565.5083, z: 0.73617446}
+    m_Target: {x: -81.9097, y: 2.9604912, z: -45.927635}
     speed: 2
-    m_Value: {x: 702.56476, y: 565.5083, z: 0.73617446}
+    m_Value: {x: -81.9097, y: 2.9604912, z: -45.927635}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -478,13 +478,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.0882972, y: -0.0030098513, z: -0.0014705331, w: -0.99618363}
+    m_Target: {x: -0.17921363, y: -0.65738744, z: 0.1626274, w: -0.7137706}
     speed: 2
-    m_Value: {x: -0.08828884, y: -0.0030095666, z: -0.0014703939, w: -0.99608934}
+    m_Value: {x: -0.17944014, y: -0.65625304, z: 0.16234283, w: -0.7146873}
   m_Size:
-    m_Target: 223.97572
+    m_Target: 108.17397
     speed: 2
-    m_Value: 223.97572
+    m_Value: 113.27118
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -575,20 +575,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Teramoto/Script/Game/Object/List
+    - Assets/Teramoto/Material
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Teramoto/Script/Game/Object/List
+  - Assets/Teramoto/Material
   m_LastFoldersGridSize: 71
   m_LastProjectPath: C:\Users\s172137\Documents\UintyMyGame\BattleTank
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 7}
-    m_SelectedIDs: 26300000
-    m_LastClickedID: 12326
-    m_ExpandedIDs: 000000006c2d0000442f0000c22f0000fe300000b43100009836000000ca9a3b
+    m_SelectedIDs: bc300000
+    m_LastClickedID: 12476
+    m_ExpandedIDs: 000000006c2d0000442f0000c22f0000fe300000b43100009036000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,7 +616,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c2d0000442f0000c22f0000fe300000b431000098360000
+    m_ExpandedIDs: 000000006c2d0000442f0000c22f0000fe300000b431000090360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
