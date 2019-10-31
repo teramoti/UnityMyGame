@@ -19,7 +19,7 @@ public class GameClearController : MonoBehaviour
 
     private int stagenum;
 
-    private int  MAXSTAGENUM= 10;
+    private int  MAXSTAGENUM= 8;
 
     private float loadTime;
 
@@ -50,9 +50,15 @@ public class GameClearController : MonoBehaviour
 
     public List<int> number = new List<int>();
 
-    public Text round;
+    public Image round;
 
     int textnum;
+
+    //音が鳴ったかのFlag
+    bool ISSound;
+
+    //音がすでに鳴ったかのFlag
+    bool IsPlaySound;
 
     void Start()
     {
@@ -68,11 +74,12 @@ public class GameClearController : MonoBehaviour
 
         animeFlag = false;
         timer = 0;
-        cleartimer = 0;
+        cleartimer = 0;  
         winUI.enabled = false;
         startUI.enabled = false;
         textnum = stagenum + 1;
-        round.text = "" + textnum;
+        //round.text = "" + textnum;
+        ISSound = false;
 
     }
     void Update()
@@ -84,14 +91,19 @@ public class GameClearController : MonoBehaviour
 
         textnum=stagenum + 1;
         enemyNum = enemyObjects.Length;
-        round.text = "" + textnum;
-
+      //  round.text = "" + textnum;
+        View(textnum);
         // データの入った箱のデータが０に等しくなった時（Enemyというタグが付いているオブジェクトが全滅したとき）
         if (enemyNum == 0)
         {
-            //ここで全滅したときの音を鳴らす
-            //音(sound1)を鳴らす
-            audioSource.PlayOneShot(clearSound);
+
+            //音はなっていない
+            if(!ISSound)
+            {
+                //音を鳴らす。
+                audioSource.PlayOneShot(clearSound);
+                ISSound = true;
+            }
 
             clearFlag = true;
 
@@ -116,15 +128,16 @@ public class GameClearController : MonoBehaviour
             {
                 //マップ読み込み
                 LoadStage();
-                foreach (GameObject obj in enemyObjects)
-                {
-                    obj.gameObject.SetActive(false);
-                    print("消す");
-                }
 
             }
             else
             {
+                if(!IsPlaySound)
+                {
+                    IsPlaySound = true;
+                       ISSound = true;
+                }
+
                 cleartimer++;
                 Destroy();
                 winUI.enabled = true;
@@ -132,13 +145,11 @@ public class GameClearController : MonoBehaviour
             }
         }
 
+        //clear用timerが2秒こえたら
         if(cleartimer> 120)
         {
-
-            print("リザルトをよびます");
+            //Sceneをいどうさせる
             SceneManager.LoadScene("GameClear");
-
-
         }
     }
 
@@ -146,12 +157,7 @@ public class GameClearController : MonoBehaviour
     void LoadStage()
     {
         stagenum += 1;
-        brockObjects = GameObject.FindGameObjectsWithTag("Brock");
 
-        foreach (GameObject obj in brockObjects)
-        {
-            Destroy(obj);
-        }
         script.Make(stagenum);
 
         print("現在のステージは"+stagenum);
@@ -160,7 +166,30 @@ public class GameClearController : MonoBehaviour
 
         clearFlag = false;
     }
+    void View(int score)
+    {
+        var digit = score;
+        //要素数0には１桁目の値が格納
+        List<int> number = new List<int>();
+        while (digit != 0)
+        {
+            score = digit % 10;
+            digit = digit / 10;
+            number.Add(score);
+        }
 
+        GameObject.Find("ScoreImage").GetComponent<Image>().sprite = numimage[number[0]];
+        for (int i = 1; i < number.Count; i++)
+        {
+            //複製
+            RectTransform scoreimage = (RectTransform)Instantiate(GameObject.Find("ScoreImage")).transform;
+            scoreimage.SetParent(this.transform, false);
+            scoreimage.localPosition = new Vector2(
+                scoreimage.localPosition.x - scoreimage.sizeDelta.x * i,
+                scoreimage.localPosition.y);
+            scoreimage.GetComponent<Image>().sprite = numimage[number[i]];
+        }
+    }
     public bool GetAnimeFlag()
     {
         return animeFlag;
@@ -175,6 +204,7 @@ public class GameClearController : MonoBehaviour
 
             Destroy();
 
+            ISSound = false;
 
         }
         if(timer>90)
@@ -188,12 +218,6 @@ public class GameClearController : MonoBehaviour
             animeFlag = false;
             timer = 0;
             startUI.enabled = false;
-            foreach (GameObject obj in enemyObjects)
-            {
-                obj.gameObject.SetActive(true);
-            }
-
-
         }
 
     }

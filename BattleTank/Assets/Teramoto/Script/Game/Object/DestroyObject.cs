@@ -10,11 +10,25 @@ public class DestroyObject : MonoBehaviour
     public int objectHP;
 
 
+    //移動音
+    public AudioClip damegeSound;
+
+    private AudioSource audioSource;
+
     GameObject score;
 
     [SerializeField]
     private int enemySocre=0; 
     Score script;
+
+    void Start()
+    {
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
+    }
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Shell"))
@@ -30,9 +44,14 @@ public class DestroyObject : MonoBehaviour
                 Destroy(other.gameObject);
                 GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
                 Destroy(effect, 2.0f);
+                //音(sound1)を鳴らす
+                audioSource.PlayOneShot(damegeSound);
+
             }
             else
             {
+                //音(sound1)を鳴らす
+                audioSource.PlayOneShot(damegeSound);
 
                 Destroy(other.gameObject);
 

@@ -29,11 +29,13 @@ public class EnemyCunnonManager : MonoBehaviour
     {
         if (script.GetAnimeFlag() == true)
         {
+
             boxCol.enabled = false;
             rader.enabled = false;
         }
         else
         {
+
             boxCol.enabled = true;
             rader.enabled = true;
         }

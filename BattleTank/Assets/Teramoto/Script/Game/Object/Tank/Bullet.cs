@@ -7,8 +7,13 @@ public class Bullet : MonoBehaviour
 {
     public GameObject shellPrefab;
     public float shotSpeed;
-    public AudioClip shotSound;
     public int shotCount;
+
+    //打った時の音
+    public AudioClip shotSound;
+
+    private AudioSource audioSource;
+
 
     [SerializeField]
     private float timeBetweenShot = 0.5f;
@@ -17,7 +22,10 @@ public class Bullet : MonoBehaviour
     private float deleteBullet = 5.0f;
     void Start()
     {
-       // shellLabel.text = "×" + shotCount;
+
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -27,7 +35,8 @@ public class Bullet : MonoBehaviour
         bool fire = Input.GetButtonDown("Fire2");
         if (fire==true && timer > timeBetweenShot)
         {
-            AudioSource.PlayClipAtPoint(shotSound, transform.position);
+            //音(sound1)を鳴らす
+            audioSource.PlayOneShot(shotSound,2.0f);
             timer = 0.0f;
             GameObject shell = Instantiate(shellPrefab, transform.position, Quaternion.identity);
             Rigidbody shellRb = shell.GetComponent<Rigidbody>();

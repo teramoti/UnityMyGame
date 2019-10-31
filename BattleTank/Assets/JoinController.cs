@@ -34,7 +34,7 @@ public class JoinController : MonoBehaviour
 
         // 一台もコントローラが接続されていなければエラー
         //if (controllerNames[0] == "") IsjoinController = false;
-        print("げんざいcontrollerは" + IsjoinController + "です。");
+       // print("げんざいcontrollerは" + IsjoinController + "です。");
     }
 
 
