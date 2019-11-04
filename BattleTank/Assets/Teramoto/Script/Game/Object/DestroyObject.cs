@@ -46,12 +46,13 @@ public class DestroyObject : MonoBehaviour
                 Destroy(effect, 2.0f);
                 //音(sound1)を鳴らす
                 audioSource.PlayOneShot(damegeSound);
-
+                audioSource.volume = 3.0f;
             }
             else
             {
                 //音(sound1)を鳴らす
                 audioSource.PlayOneShot(damegeSound);
+                audioSource.volume = 3.0f;
 
                 Destroy(other.gameObject);
 
