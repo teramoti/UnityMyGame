@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 400716103}
-  flashtime: 10
+  flashtime: 20
 --- !u!114 &400716103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1426043422}
-  flashtime: 10
+  flashtime: 20
 --- !u!1 &1503979538
 GameObject:
   m_ObjectHideFlags: 0
